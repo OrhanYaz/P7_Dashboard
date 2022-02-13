@@ -2,7 +2,9 @@
 
 
 import streamlit as st
+
 import utils
+
 
 def main():
     
@@ -103,15 +105,9 @@ def main():
     with col1:
         listValueCustomer = [[feature1,valueCustomer1],[feature2,valueCustomer2]]
         fig = utils.plotScatter2D(dataRef, listValueCustomer)
-        st.markdow('### ↓ Positionnement du client en fonction des 2 premières caractéristiques selectionnées')
-       # st.markdown('### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Positionnement du client en fonction des 3 caractéristiques selectionnées 🡮')
+
         st.write(fig)
-    ### Scatter Plot 3D
-    #with col2:
-     #   feature3 = st.selectbox('Choisissez la 3ème caractéristique:',df.index, index=2)
-     #   listValueCustomer.append([feature3,dataCustomer.loc[dataCustomer[loanColumn]==user_input, feature3].values[0]])
-      #  fig = utils.plotScatter3D(dataRef, listValueCustomer)
-      #  st.write(fig)
+
 
 if __name__ == "__main__":
     main()
